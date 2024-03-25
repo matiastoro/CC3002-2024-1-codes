@@ -5,7 +5,10 @@ class Money(fAmount: Int, fCurrency: String) {
   def getCurrency(): String = fCurrency
 
   def add(other: Money): Money = {
+    // if(fCurrency == other.getCurrency())
     new Money(fAmount + other.getAmount(), fCurrency)
+    // else
+    //  new MoneyBag(this, other)
   }
   override def equals(other: Any): Boolean = {
     if (other.isInstanceOf[Money]) {
